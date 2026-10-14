@@ -1,0 +1,21 @@
+# Exact publication allowlist is recorded in the separate review manifest.
+node_modules/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+*.log
+music/
+*.wav
+*.mp4
+*.mov
+*.flac
+*.mp3
+out/*
+!out/cover_16x9.png
+!out/cover_4x3.png
+!out/cover_3x4.png
+.DS_Store
+Thumbs.db

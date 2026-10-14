@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>越亲近越伤人 · 封面</title>
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>html, body { margin: 0; background: #07080c; overflow: hidden; } canvas { display: block; }</style>
+<script>
+  // cover.html?kind=16x9|4x3|3x4 — the canvas takes that shape; the scene is framed for it in src/cover.js
+  const SIZES = { '16x9': [1920, 1080], '4x3': [1440, 1080], '3x4': [1080, 1440] };
+  window.__KIND = new URLSearchParams(location.search).get('kind') || '16x9';
+  [window.__W, window.__H] = SIZES[window.__KIND];
+</script>
+</head>
+<body>
+<canvas id="gl"></canvas>
+<script>const cv = document.getElementById('gl'); cv.width = __W; cv.height = __H;</script>
+<script src="src/core.js"></script>
+<script src="src/post.js"></script>
+<script src="src/blob.js"></script>
+<script src="src/campus.js"></script>
+<script src="src/props.js"></script>
+<script src="src/cover.js"></script>
+</body>
+</html>

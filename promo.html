@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>越亲近越伤人</title>
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+  html, body { margin: 0; height: 100%; background: #07080c; color: #8a8f9e; font: 13px/1.4 "JetBrains Mono", monospace; overflow: hidden; }
+  #wrap { position: absolute; inset: 0 0 56px 0; display: flex; align-items: center; justify-content: center; }
+  #gl { width: min(100vw, calc((100vh - 56px) * 16 / 9)); aspect-ratio: 16 / 9; display: block; background: #0d0f17; }
+  #bar { position: absolute; left: 0; right: 0; bottom: 0; height: 56px; padding: 0 16px; box-sizing: border-box; }
+  #track { height: 6px; margin-top: 12px; background: #1a1c25; cursor: pointer; }
+  #prog { height: 100%; width: 0; background: #d97757; }
+  #hud { margin-top: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  body.export #wrap { inset: 0; display: block; }
+  body.export #gl { width: 1920px; height: 1080px; }
+  body.export #bar { display: none; }
+</style>
+</head>
+<body>
+<div id="wrap"><canvas id="gl" width="1920" height="1080"></canvas></div>
+<div id="bar"><div id="track"><div id="prog"></div></div><div id="hud"></div></div>
+<audio id="aud" src="out/audio.wav" preload="auto"></audio>
+<script src="src/core.js"></script>
+<script src="src/post.js"></script>
+
+<script src="src/blob.js"></script>
+<script src="src/campus.js"></script>
+<script src="src/props.js"></script>
+<script src="src/worlds.js"></script>
+<script src="src/scenes/hook.js"></script>
+<script src="src/scenes/reasons.js"></script>
+<script src="src/scenes/ending.js"></script>
+<script src="src/main.js"></script>
+</body>
+</html>

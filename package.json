@@ -1,0 +1,23 @@
+{
+  "name": "closer-words",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "fonts": "node tools/fetch-fonts.mjs",
+    "serve": "node tools/server.mjs",
+    "export": "node export.mjs",
+    "cues": "node export.mjs --cues",
+    "covers": "node tools/covers.mjs",
+    "test:audio": "python -B -m unittest discover -s tests -v"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^23.11.1"
+  },
+  "version": "1.0.0",
+  "description": "代码生成的亲密关系心理科普短片，开源版仅保留程序合成音效。",
+  "license": "MIT",
+  "author": "Huamucuo",
+  "engines": {
+    "node": ">=22"
+  }
+}
